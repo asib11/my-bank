@@ -5,8 +5,8 @@ document.getElementById("login-btn").addEventListener('click', ()=>{
     const password = passwordField.value;
 
     if(email === 'asib@gmail.com' && password === "asib"){
-        console.log('valid');
+        window.location.href = 'inside.html';
     }else{
-        console.log("invalid");
+        alert("invalid");
     }
 });
