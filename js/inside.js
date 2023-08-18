@@ -15,11 +15,9 @@ document.getElementById("withdraw-btn").addEventListener('click',()=>{
     const withdrawField = document.getElementById("withdraw-input");
     const withdraw = document.getElementById("withdraw");
     const previousWithdraw = withdraw.innerText;
-    const withdrawTotal = Number(previousWithdraw) - Number(withdrawField.value);
-    if(withdrawTotal>= 0){
-        withdraw.innerText = withdrawTotal;
-    }else{
-        alert("insufficient balance")
-    }
-    withdrawField = '';
+    const withdrawTotal = Number(previousWithdraw) + Number(withdrawField.value);
+    withdraw.innerText = withdrawTotal;
+    withdrawField.value = '';
 });
+
+const total = document.getElementById("total");
