@@ -16,15 +16,15 @@
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white text-center">
                 <div class="bg-green-400 p-8 rounded-xl">
                     <h4 class="text-3xl">deposit</h4>
-                    <h2 class="text-5xl font-semibold">&#2547;00</h2>
+                    <h2  class="text-5xl font-semibold">&#2547;<span id="deposit">00</span></h2>
                 </div>
                 <div class="bg-red-400 p-8 rounded-xl">
                     <h4 class="text-3xl">withdraw</h4>
-                    <h2 class="text-5xl font-semibold">&#2547;00</h2>
+                    <h2 class="text-5xl font-semibold">&#2547;<span id="withdraw">00</span></h2>
                 </div>
                 <div class="bg-blue-500 p-8 rounded-xl">
                     <h4 class="text-3xl">total</h4>
-                    <h2 class="text-5xl font-bold">&#2547;00</h2>
+                    <h2 class="text-5xl font-bold">&#2547;<span id="total">00</span></h2>
                 </div>
             </div>
         </section>
@@ -33,16 +33,17 @@
             <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
                 <div class="bg-green-200 p-8 rounded-md">
                     <h3 class="text-3xl font-semibold mb-4">Deposit Amount</h3>
-                    <input class="w-11/12 block mb-2 px-2 bg-green-100 rounded-md" type="text" name="" id="deposit" placeholder="Enter your Amount">
-                    <button class="bg-yellow-300 hover:bg-green-600 hover:text-white px-8 py-2 rounded-md " id="login-btn">deposit</button>
+                    <input class="w-11/12 block mb-2 px-2 bg-green-100 rounded-md" type="text" name="" id="deposit-input" placeholder="Enter your Amount">
+                    <button class="bg-yellow-300 hover:bg-green-600 hover:text-white px-8 py-2 rounded-md " id="deposit-btn">deposit</button>
                 </div>
                 <div class="bg-red-200 p-10 rounded-xl">
                     <h3 class="text-3xl font-semibold mb-4">withdraw Amount</h3>
-                    <input class="w-11/12 block mb-2 px-2 bg-red-100 rounded-md" type="text" name="" id="withdraw" placeholder="Enter your Amount">
-                    <button class="bg-yellow-300 hover:bg-red-600 hover:text-white px-8 py-2 rounded-md " id="login-btn">withdraw</button>
+                    <input class="w-11/12 block mb-2 px-2 bg-red-100 rounded-md" type="text" name="" id="withdraw-input" placeholder="Enter your Amount">
+                    <button class="bg-yellow-300 hover:bg-red-600 hover:text-white px-8 py-2 rounded-md " id="withdraw-btn">withdraw</button>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/inside.js"></script>
 </body>
 </html>
