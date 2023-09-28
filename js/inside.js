@@ -10,12 +10,12 @@ document.getElementById("deposit-btn").addEventListener('click',()=>{
     }
     const deposit = document.getElementById("deposit");
     const previousDeposit = deposit.innerText;
-    const depositTotal = Number(previousDeposit) + Number(depositFieldValue);
+    const depositTotal = parseInt(previousDeposit) + parseInt(depositFieldValue);
     deposit.innerText = depositTotal;
 
     const total = document.getElementById("total");
     const totalBalance = total.innerText;
-    const newTotalBalance = Number(totalBalance)+ Number(depositFieldValue);
+    const newTotalBalance = parseInt(totalBalance)+ parseInt(depositFieldValue);
     total.innerText = newTotalBalance;
 
 });
@@ -23,9 +23,9 @@ document.getElementById("deposit-btn").addEventListener('click',()=>{
 document.getElementById("withdraw-btn").addEventListener('click',()=>{
 
     const withdrawField = document.getElementById("withdraw-input");
-    const withdrawFieldValue = withdrawField.value;
+    const withdrawFieldValue = parseInt(withdrawField.value);
     const withdraw = document.getElementById("withdraw");
-    const previousWithdraw = withdraw.innerText;
+    const previousWithdraw = parseInt(withdraw.innerText);
     withdrawField.value = '';
     if(isNaN(withdrawFieldValue)){
         alert('please provide a vaild number');
@@ -33,13 +33,13 @@ document.getElementById("withdraw-btn").addEventListener('click',()=>{
     }
     
     const total = document.getElementById("total");
-    const totalBalance = total.innerText;
-    if(totalBalance >= withdrawFieldValue){
-        const withdrawTotal = Number(previousWithdraw) + Number(withdrawFieldValue);
+    const totalBalance = parseInt(total.innerText);
+    if((totalBalance > withdrawFieldValue)||(totalBalance == withdrawFieldValue)){
+        const withdrawTotal = previousWithdraw + withdrawFieldValue;
         withdraw.innerText = withdrawTotal;
-        const newTotalBalance = Number(totalBalance)- Number(withdrawFieldValue);
+        const newTotalBalance = totalBalance- withdrawFieldValue;
         total.innerText = newTotalBalance;
-    }else{
+    }else if((totalBalance < withdrawFieldValue)){
         alert('insuffience balance');
     }
     
